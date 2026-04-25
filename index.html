@@ -15,6 +15,15 @@
             padding: 40px;
             max-width: 900px;
             margin: auto;
+
+            background-size: 200% 200%;
+            animation: fundo 12s ease infinite;
+        }
+
+        @keyframes fundo {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         h1 {
@@ -23,6 +32,13 @@
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 10px;
+
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
         }
 
         h2 {
@@ -39,6 +55,25 @@
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.05);
+
+            opacity: 0;
+            transform: translateY(20px);
+            animation: aparecer 0.8s ease forwards;
+        }
+
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+        section:nth-child(4) { animation-delay: 0.4s; }
+        section:nth-child(5) { animation-delay: 0.5s; }
+        section:nth-child(6) { animation-delay: 0.6s; }
+        section:nth-child(7) { animation-delay: 0.7s; }
+
+        @keyframes aparecer {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         ul {
@@ -49,8 +84,16 @@
 
 <body>
 
-    <h1>Análise da Infraestrutura das Escolas Públicas no Município de Campos Sales - CE</h1>
+    <h1>Análise da Infraestrutura das Escolas Públicas em Campos Sales - CE</h1>
     <p><b>Campos Sales - CE</b></p>
+
+    <section>
+        <h2>Introdução</h2>
+        <p>
+            A educação é um direito fundamental, mas sua qualidade também depende da estrutura das escolas.
+            Em Campos Sales - CE, diversos problemas estruturais afetam diretamente o aprendizado dos alunos.
+        </p>
+    </section>
 
     <section>
         <h2>Introdução</h2>
@@ -147,7 +190,6 @@
         <p>
             A melhoria da estrutura das escolas é essencial para garantir uma educação de qualidade
             e melhores condições para todos.
-        </p>
     </section>
 
 </body>
